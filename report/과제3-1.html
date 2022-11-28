@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <b>2진수를 16진수로 </b><hr><br>
+
+    <script>
+        function bToH(bnum){
+            //2진수를 10진수로
+            var len = bnum.length;
+            var i = 0, dnum = 0;
+            while (i < len) {
+                var d = bnum.substring(i, i+1);
+                d = parseInt(d);
+                dnum += d * Math.pow(2, len-i-1);
+                i++;
+            }
+
+
+
+            var hnum = dnum.toString(16);
+            document.write("입력한 2진수를 16진수로 변환하면 " + hnum   + " 이다.")
+
+            //10진수를 16진수로
+        }
+    </script>
+</head>
+<body>
+  <script>
+    var bnum = prompt("이진수를 입력하세요.", "");
+    bToH(bnum);
+
+
+  </script>
+</body>
+</html>

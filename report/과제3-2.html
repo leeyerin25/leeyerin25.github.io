@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>20201708</title>
+    <h1>파스칼 삼각형</h1><hr><br>
+    <script>
+
+        function new_row(now_row){
+            var len = now_row.length;
+            var pascal = [];
+            pascal[0] = 1;
+            pascal[len] = 1;  // 끝값도 1로 할당
+
+            if (len >= 2) {
+                var i = 1;
+                while (i < len) {
+                    pascal[i] = now_row[i - 1] + now_row[i];
+                    i++;
+                }
+            }
+            return pascal;
+        }
+
+
+
+    </script>
+</head>
+<body>
+  <script>
+        //첫번째 행
+        var first = [1];
+        var row = prompt("파스칼 삼각형의 높이:", "");
+        parseInt(row)
+        document.write(first);
+
+        //두번째 행
+        if (row>=2){
+        new_things = new_row(first);
+        document.write("<br>"+new_things);
+
+        //세번째 행 : 2보다 큰행들 무한반복
+        num = 2;
+        while(num<row){   // row : 입력 행 값
+            new_things = new_row(new_things);
+            document.write("<br>"+new_things);
+            num += 1;}}
+
+  </script>
+
+</body>
+</html>
