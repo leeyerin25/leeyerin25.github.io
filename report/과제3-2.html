@@ -15,8 +15,9 @@
             if (len >= 2) {
                 var i = 1;
                 while (i < len) {
-                    pascal[i] = now_row[i - 1] + now_row[i];
-                    i++;
+                    pascal[i] = now_row[i - 1] + now_row[i]; //2번행 0번째값+ 2번행+1번값
+                    i++;  //now_row 는 리스트임 [1,1][0] + [1,1][1]   1+1
+                    //[1,2,1][0]+[1,2,1][1] = 3
                 }
             }
             return pascal;
@@ -36,13 +37,13 @@
 
         //두번째 행
         if (row>=2){
-        new_things = new_row(first);
-        document.write("<br>"+new_things);
+        new_things = new_row(first);  // new thing에 2가 들어갓음 : 찍히는건 [1,1]
+        document.write("<br>"+new_things); // 밑에 1,1 찍히게함
 
         //세번째 행 : 2보다 큰행들 무한반복
         num = 2;
         while(num<row){   // row : 입력 행 값
-            new_things = new_row(new_things);
+            new_things = new_row(new_things); //리스트개수 2개니까 2개들어가고 ->
             document.write("<br>"+new_things);
             num += 1;}}
 
