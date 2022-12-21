@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script>
+      function plot(data) {
+          for (var i=0; i<data.length; i++) {
+              var size = data[i];
+              //while은 * 찍게 반복
+              while(size>0) {
+                  document.write('*');
+                  --size ;
+              }
+                document.write(data[i]+"<br>");
+        }
+      }
+  </script>
+
+</head>
+<body>
+<script>
+    var plots_data = [20, 5, 6, 13, 5] ;
+    plot(plots_data);
+</script>
+</body>
+</html>

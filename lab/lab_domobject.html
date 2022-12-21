@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        /*
+        var company = new Object();
+        company.name = 'naver';
+        company.ceo = new Object();
+        company.ceo.name = 'yerin';
+        company.money = 0;
+        company.get_money = function (){
+            company.money += 500
+        };
+*/
+        /* 동일하게 딕트형식으로 작성*/
+        var company2 = {
+            name : "naver",
+            ceo : {
+                name : "yerin"
+            },
+            money : 20000,
+            get_moneyy : function (){
+                var self = this;
+                this.money += 500
+                document.write("<br>"+ "영업후 잔고:" + company2.money+'<br>');
+
+                 //함수안에 함수를 쓸때 -> 처음에 금액 고정때문에 못바뀜
+                //그래서 그 아이를 또 새로운변수로 지정해주는 self 를 사용
+                var increase_area = function (){
+                    self.money *= 2} ; // this 는 10으로 고정되있음
+                increase_area()
+
+
+            }
+        };
+
+    </script>
+
+</head>
+<body>
+<h2> 에린이의 네이버 </h2>
+
+<script>
+    document.write("<br>"+ company2.money+'<br>');
+    company2.get_moneyy();
+    document.write("<br>"+ "영업후후 잔고:" + company2.money+'<br>');
+/*
+
+    for (var prop in company2 ){
+        document.write("<br>"+prop + ":"  + company2[prop])
+        console.log(prop + ":" + company2[prop])
+    };
+*/
+</script>
+
+</body>
+</html>

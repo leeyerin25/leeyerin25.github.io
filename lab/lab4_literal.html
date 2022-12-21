@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var literal_circle ={
+            radius : 10,
+            get_area : function (){
+                var self = this;
+                document.write("<p>변경전 반지름"+ this.radius);
+
+                //변수명에 함수 지정할때는 =
+                var increase_area = function (){
+                    self.radius *= 2 ; // this 는 10으로 고정되있음
+                };
+                increase_area();
+                document.write("<p>변경후 반지름"+ this.radius);
+
+                var minimal_area = function (){
+                    var self2 = this;
+                        self2.neww = self.radius;
+                        self2.neww *= 0.2 ; // this 는 10으로 고정되있음
+                        document.write("<p>변경후후 반지름"+ self2.neww );
+                };
+                minimal_area();
+                document.write("<p>변경후후 반지름"+ this.radius );
+            }
+        }
+
+    </script>
+</head>
+<body>
+<script>
+    literal_circle.get_area();
+        document.write("<br> "+ literal_circle.radius+'<br>');
+
+
+
+
+    //document.write()
+</script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+      function Circle(radius){
+        this.radius2 = radius;
+        this.get_area =
+                function(){
+                  return this.radius2*2;
+        };
+      }
+
+
+
+
+
+
+       function Circle(radius){
+           this.radius2 = radius;
+       }
+
+       Circle.prototype.get_area = function (){
+          return this.radius2*2;
+       };
+    </script>
+</head>
+<body>
+<script>
+var my_circle = new Circle(10);
+document.write("<br>두배 : " + my_circle.get_area() )
+
+
+</script>
+
+</body>
+</html>
